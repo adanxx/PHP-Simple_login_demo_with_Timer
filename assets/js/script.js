@@ -26,7 +26,7 @@ $(document).ready(function() {
               console.log(data);
                 
               var countNum =  parseInt(data); 
-              
+
               if(countNum >= 3){
                  lockDown();
               }
@@ -37,6 +37,12 @@ $(document).ready(function() {
 
 function lockDown(){
   alert(" Login failed times 3  - trigger lockdonw");
+
+   //1. create a function to disable button input field()
+   //2. create a function to trigger a countDown
+   //3. Create a funtion to unlock the button, field and clear previous values.
+
+
 }
 
 

@@ -19,11 +19,22 @@
 
 ?>
 
+ <div class="container">
+    <div class="row">
+         <div class="col md-12 text-center">
+                <div class="box-sm">
+                   <div class="wrapper-mini-box" style= "padding-left: 20px; padding-right: 20px">
+                        <h6><strong>Lockdown of system in effect :</strong></h6>
+                        <hr>
+                        <span>11:00</span>
+                   </div>
+                </div>
+         </div>   
+    </div>
+ </div>
 
  <div class="container">
     <div class="box-md">
-
-  
        <div class="row">
         <div class="col-md-6 offset-md-3 border p-0">
             <div class="wrapper text-center">
