@@ -12,6 +12,10 @@ html, body{
     background: #eee;
 }
 
+h6{
+    margin: 0;
+}
+
 .box-md{
     padding: 80px 0;
 }
@@ -23,20 +27,21 @@ html, body{
 .wrapper{
     margin: 0 auto;
     background: #fff;
-    height: 350px;
+    height: 380px;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, .4);
 
 }
 
-.wrapper-mini-box{
-    background: #fff;
+.time-box{
+    background: #F4F4F4;
     border-radius: 5px;
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, .4);
     padding: 10px 0;
-    width: 50%;
+    width: 70%;
     margin: 0 auto;
+    color: red;
 }
 
 
@@ -48,5 +53,5 @@ html, body{
 }
 
 form{
-    padding: 50px 0;
+    padding: 20px 0;
 }
