@@ -41,6 +41,10 @@ h6{
     padding: 10px 0;
     width: 70%;
     margin: 0 auto;
+    display: none;
+}
+
+.time-box > h6{
     color: red;
 }
 

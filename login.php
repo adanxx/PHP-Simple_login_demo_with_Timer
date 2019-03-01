@@ -29,8 +29,8 @@
               <hr> 
                 
               <div class="time-box">
-                  <h><strong>Lockdown of system in effect :</strong></h6><br>
-                  <span classc="clock">11:00</span>
+                  <h6><strong>Lockdown of system in effect</strong></h6>
+                  <span class="clock" id="lock">0</span>
               </div>
               
               <form method="GET" id="fm-lg">

@@ -11,39 +11,80 @@ $(document).ready(function() {
   }); 
 
 
-    $('form').on('submit', function(e){ 
-       
-      e.preventDefault();
+  //2.Tigger submission form
+  $('form').on('submit', function(e){ 
+      
+    e.preventDefault();
 
-       var email = $("#inputEmail").val();
-       var password = $("#inputPassword").val();
+      var email = $("#inputEmail").val();
+      var password = $("#inputPassword").val();
 
-       
+      
 
-      $.post("ajax/ajax_userAction.php", {userEmail: email, userPassword: password})
-            .done(function(data){
+    $.post("ajax/ajax_userAction.php", {userEmail: email, userPassword: password})
+          .done(function(data){
 
-              console.log(data);
-                
-              var countNum =  parseInt(data); 
+            console.log(data);
+              
+            var countNum =  parseInt(data); 
 
-              if(countNum >= 3){
-                 lockDown();
-              }
+            if(countNum >= 3){
+               disabledAll();
+              countDown(0 ,60, "#lock");
+              
+            }
 
-            });
-    });
+          });
+  });
+
+
+  function countDown(min, seconds, element){
+
+    var min = min;
+    var sec = seconds;
+    var element = $(element);
+
+    element.text(" Please wait for "+min+" min : "+ seconds+" seconds");
+    seconds--;
+    
+    if(min == 0 && seconds == 0){
+      clearTimeout(timer); 
+      min = 1;
+      seconds = 60;
+      reset();
+     
+    }
+
+    if(seconds == 0){
+      seconds = 60;
+      min--; 
+    }
+    
+    var timer = setTimeout(() => {
+        countDown(min ,seconds, "#lock");
+    }, 1000);   
+  }
+
+  function reset(){
+    $(".time-box").fadeOut(2000); 
+
+     //1. send aja_rest file 
+     //2.count rest 0 
+     //3. empty : success
+     //4. enable field and buttons
+
+
+  }
+
+  function disabledAll(){
+    $(".time-box").fadeIn(2000);
+
+     //1. disable button and input fields:
+
+  }
+
+
+
+
 });
-
-function lockDown(){
-  alert(" Login failed times 3  - trigger lockdonw");
-
-   //1. create a function to disable button input field()
-   //2. create a function to trigger a countDown
-   //3. Create a funtion to unlock the button, field and clear previous values.
-
-
-}
-
-
 
